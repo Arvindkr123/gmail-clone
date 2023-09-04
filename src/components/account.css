@@ -1,0 +1,24 @@
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.account .MuiAvatar-root {
+  width: 30px;
+  height: 30px;
+}
+
+.account p {
+  display: flex;
+  align-items: center;
+  margin-left: -28px;
+}
+
+.account svg {
+  font-size: 16px;
+}
+
+.plus {
+  margin-left: -25px;
+}

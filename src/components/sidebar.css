@@ -1,0 +1,30 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.compose_btn {
+  padding: 10px 20px !important;
+  border-radius: 40px !important;
+  box-shadow: 2px 2px 3px #ccc;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  margin-left: 10px !important;
+  max-width: 150px;
+  font-weight: 700 !important;
+  text-transform: capitalize !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sidebarOptions__Heading {
+  font-size: 15px;
+  margin: 0;
+  margin-left: 25px;
+}
+
+.line{
+    border-bottom: 1px solid whitesmoke;
+    margin: 10px 0px;
+}
