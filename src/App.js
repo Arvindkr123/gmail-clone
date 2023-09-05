@@ -9,7 +9,7 @@ const App = () => {
       <Header />
       <div className="app_body">
         <Sidebar />
-        <EmailList/>
+        <EmailList />
       </div>
     </div>
   );

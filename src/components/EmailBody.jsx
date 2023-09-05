@@ -2,27 +2,27 @@ import React from "react";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import LabelIcon from "@mui/icons-material/Label";
-import "./emailList.css"
+import "./emailList.css";
 
-const EmailBody = () => {
+const EmailBody = ({ name, message, time, subject }) => {
   return (
     <div className="emailBody">
       <div className="emailBody__left">
         <CheckBoxOutlineBlankIcon />
         <StarBorderIcon />
         <LabelIcon />
-        <h4>Elon Musk</h4>
+        <h4>{name}</h4>
       </div>
       <div className="emailBody__middle">
         <div className="emailBody__middle--msg">
           <p>
-            <b>Subject </b>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <b>{subject} </b>
+            {message}
           </p>
         </div>
       </div>
       <div className="emailBody__right">
-        <p>2:30 AM</p>
+        <p>{time}</p>
       </div>
     </div>
   );
