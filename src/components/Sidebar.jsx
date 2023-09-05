@@ -16,11 +16,19 @@ import FindInPageIcon from "@mui/icons-material/FindInPage";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import AddAccount from "./AddAccount";
+import { useDispatch } from "react-redux";
+import { openSendMessage } from "../features/mailSlice";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="sidebar">
-      <Button startIcon={<AddIcon />} className="compose_btn">
+      <Button
+        startIcon={<AddIcon />}
+        onClick={() => dispatch(openSendMessage())}
+        className="compose_btn"
+      >
         Compose
       </Button>
       <SidebarOptions
@@ -50,7 +58,7 @@ const Sidebar = () => {
       <SidebarOptions Icon={KeyboardIcon} title={"Join a meeting"} />
       <div className="line"></div>
       <h3 className="sidebarOptions__Heading">Hangouts</h3>
-      <AddAccount/>
+      <AddAccount />
     </div>
   );
 };

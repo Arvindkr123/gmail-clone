@@ -18,8 +18,14 @@ import SendIcon from "@mui/icons-material/Send";
 import AttachmentIcon from "@mui/icons-material/Attachment";
 
 import "./compose.css";
+import { useDispatch } from "react-redux";
+import { closeSendMessage } from "../features/mailSlice";
 
 const Compose = () => {
+  const dispatch = useDispatch();
+  const hideComposeHandler = () => {
+    dispatch(closeSendMessage());
+  };
   return (
     <div className="compose">
       {/* Compose header start */}
@@ -28,9 +34,9 @@ const Compose = () => {
           <span>New Message</span>
         </div>
         <div className="compose__header__right">
-          <RemoveIcon />
+          <RemoveIcon onClick={hideComposeHandler} />
           <HeightIcon />
-          <CloseIcon />
+          <CloseIcon onClick={hideComposeHandler} />
         </div>
       </div>
       {/* Compose header end */}
