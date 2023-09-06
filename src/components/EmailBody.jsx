@@ -3,10 +3,27 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import LabelIcon from "@mui/icons-material/Label";
 import "./emailList.css";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { openMessage } from "../features/mailSlice";
 
 const EmailBody = ({ name, message, time, subject }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const goToMailPageAndReadMessage = () => {
+    dispatch(
+      openMessage({
+        name,
+        message,
+        time,
+        subject,
+      })
+    );
+    navigate("/mail");
+  };
+
   return (
-    <div className="emailBody">
+    <div className="emailBody" onClick={() => goToMailPageAndReadMessage()}>
       <div className="emailBody__left">
         <CheckBoxOutlineBlankIcon />
         <StarBorderIcon />

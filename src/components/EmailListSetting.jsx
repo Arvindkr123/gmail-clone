@@ -6,12 +6,15 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
 import { IconButton } from "@mui/material";
-const EmailListSetting = () => {
+
+const EmailListSetting = ({ backIcon, backHomePage }) => {
   return (
     <div className="emailList__Settings">
       <div className="emailList__Settings_left">
+        <IconButton onClick={() => backHomePage()}>
+          {backIcon && backIcon}
+        </IconButton>
         <IconButton>
           <CheckBoxOutlineBlankIcon />
         </IconButton>
@@ -33,7 +36,7 @@ const EmailListSetting = () => {
         <IconButton>
           <ChevronRightIcon />
         </IconButton>
-      </div>  
+      </div>
     </div>
   );
 };
