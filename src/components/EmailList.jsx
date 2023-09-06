@@ -8,7 +8,6 @@ import { collection, getDocs } from "firebase/firestore";
 
 const EmailList = () => {
   const [emails, setEmails] = useState([]);
-  console.log(emails);
 
   // Function to read data from the "mails" collection
   const readDataFromFirestore = async () => {
