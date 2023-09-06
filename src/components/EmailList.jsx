@@ -42,7 +42,8 @@ const EmailList = () => {
       {emails.map((email) => (
         <EmailBody
           key={email.id}
-          name={email.to}
+          name={email.fromName}
+          from={email.from}
           subject={email.subject}
           message={email.message}
           time={new Date(email.timestamp?.seconds * 1000).toLocaleTimeString()}

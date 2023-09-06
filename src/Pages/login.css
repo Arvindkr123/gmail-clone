@@ -1,0 +1,43 @@
+/* body {
+  background: url(https://img.freepik.com/free-photo/social-media-concept-with-smartphone_52683-100042.jpg?size=626&ext=jpg);
+  background-position: center;
+  background-size: cover;
+} */
+
+.login_wrapper {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.login__img {
+  background-color: whitesmoke;
+  padding: 100px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.login_wrapper img {
+  width: 400px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.login_wrapper .login-btn {
+  background-color: #4385f3;
+  border: 0;
+  padding: 20px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.login_wrapper .login-btn:hover {
+  background-color: blueviolet;
+}

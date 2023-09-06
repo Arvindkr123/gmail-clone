@@ -15,7 +15,7 @@ import { selectedMessage } from "../features/mailSlice";
 
 const EmailDetails = () => {
   const navigate = useNavigate();
-  const { name, message, time, subject } = useSelector(selectedMessage);
+  const { name, message, time, subject, from } = useSelector(selectedMessage);
   console.log(name, message, time, subject);
 
   const backHomePage = () => {
@@ -53,8 +53,8 @@ const EmailDetails = () => {
             <IconButton>
               <Avatar></Avatar>
             </IconButton>
-            {/* <h4>Arvind Kumar</h4> */}
-            <p>{name && name}</p>
+            <h4>{name && name}</h4>
+            <p>{from && from}</p>
           </div>
           <div className="emailDetail__middle__right">
             <p>{time && time}</p>

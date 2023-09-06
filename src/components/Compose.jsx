@@ -19,14 +19,16 @@ import AttachmentIcon from "@mui/icons-material/Attachment";
 import { addDoc, serverTimestamp, collection } from "firebase/firestore";
 
 import "./compose.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { closeSendMessage } from "../features/mailSlice";
 import { db } from "../configFirebase/Firebase";
+import { userSelect } from "../features/userSlice";
 
 const Compose = () => {
   const [to, setTo] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const user = useSelector(userSelect);
 
   const dispatch = useDispatch();
   const hideComposeHandler = () => {
@@ -50,6 +52,8 @@ const Compose = () => {
       subject: subject,
       message: message,
       timestamp: serverTimestamp(),
+      from: user.email, 
+      fromName: user.displayName,
     };
     // Add the data to the "mails" collection
     addDoc(collection(db, "mails"), data)

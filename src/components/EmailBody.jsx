@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { openMessage } from "../features/mailSlice";
 
-const EmailBody = ({ name, message, time, subject }) => {
+const EmailBody = ({ name, message, time, subject, from }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const goToMailPageAndReadMessage = () => {
@@ -17,6 +17,7 @@ const EmailBody = ({ name, message, time, subject }) => {
         message,
         time,
         subject,
+        from,
       })
     );
     navigate("/mail");
