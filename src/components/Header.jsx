@@ -20,7 +20,7 @@ const Header = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        alert("Sign-out successful");
+        console.log("Sign-out successful");
       })
       .catch((error) => {
         // An error happened.
